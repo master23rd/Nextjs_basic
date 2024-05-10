@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react"
-import Navbar from "@/components/Navbar"
+import Layout from "@/components/Layout"
 import ResourceHighlight from "@/components/ResourceHighlight"
 import Newsletter from "@/components/Newsletter"
 import ResourceList from "@/components/ResourceList"
@@ -7,16 +7,14 @@ import Footer from "@/components/Footer"
 
 //export default function Home() {
 const Home = () => {
-  
-return (
-  <>
-    <Navbar />
-    <ResourceHighlight /> 
-    <Newsletter />
-    <ResourceList />
-    <Footer />
-  </>
-)
+  return (
+    <Layout>
+      <ResourceHighlight /> 
+      <Newsletter />
+      <ResourceList />
+      <Footer />
+    </Layout>
+  )
 }
 
 export default Home
