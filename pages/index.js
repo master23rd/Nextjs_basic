@@ -4,6 +4,7 @@ import ResourceHighlight from "@/components/ResourceHighlight"
 import Newsletter from "@/components/Newsletter"
 import ResourceList from "@/components/ResourceList"
 import Footer from "@/components/Footer"
+import { resources } from "@/api/data"
 
 //export default function Home() {
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <ResourceHighlight /> 
       <Newsletter />
       <ResourceList />
+      {JSON.stringify(resources)}
       <Footer />
     </Layout>
   )
