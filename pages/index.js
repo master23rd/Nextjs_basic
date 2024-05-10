@@ -10,9 +10,9 @@ import { resources } from "@/api/data"
 const Home = () => {
   return (
     <Layout>
-      <ResourceHighlight /> 
+      <ResourceHighlight resources={resources} /> 
       <Newsletter />
-      <ResourceList />
+      <ResourceList resources={resources}/>
       {JSON.stringify(resources)}
       <Footer />
     </Layout>
