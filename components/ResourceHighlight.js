@@ -20,8 +20,6 @@ const ResourceHighlight = ({resources}) => {
               )
             })
           }
-
-         
         </div>
       </div>
     </section>

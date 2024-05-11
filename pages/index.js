@@ -13,7 +13,7 @@ const Home = () => {
       <ResourceHighlight resources={resources} /> 
       <Newsletter />
       <ResourceList resources={resources}/>
-      {JSON.stringify(resources)}
+      {/* {JSON.stringify(resources)} */}
       <Footer />
     </Layout>
   )
