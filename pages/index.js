@@ -6,9 +6,17 @@ import ResourceList from "@/components/ResourceList"
 import Footer from "@/components/Footer"
 import resources from "./api/resources"
 // import { resources } from "@/api/data"
+import data from "./api/data.json" 
 
 //export default function Home() {
 const Home = ({resources}) => {
+
+  //running from client
+  // useEffect(() => {
+  //   fetch("http://localhost:3001/api resources") 
+  // }, [])
+
+  console.log('calling from home');
   // debugger
   return (
     <Layout>
@@ -24,9 +32,9 @@ const Home = ({resources}) => {
 //server side props (called every time visit page)
 //funciton executed on the server
 export async function getServerSideProps() {
-  const resData = await fetch("http://localhost:3000/api/resources")
+  const resData = await fetch("http://localhost:3001/api/resources")
   const data = await resData.json()
-
+  console.log(data);
   return {
     props : {
       resources : data
@@ -35,10 +43,13 @@ export async function getServerSideProps() {
 }
 
 //static props (only called on build time - called only once)
+//function called on server
 // export async function getStaticProps() {
 //   //resources static props - return promise
-//   const resData = await fetch("http://localhost:3000/api/resources")
-//   const data = await resData.json()
+//   // const resData = await fetch("http://localhost:3000/api/resources")
+//   // const data = await resData.json()
+
+//   console.log('called staticprops');
 //   return {
 //     props: {
 //       resources : data
